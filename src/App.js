@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+import map from './Images/map.jpg';
+import coast from './Images/coast.jpg';
+import fjords from './Images/fjords.jpg';
+import stairway from './Images/stairway.jpg';
+
+
 function App() {
+
+
+  const photoArray = [map, coast, fjords, stairway];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Revolving Carousel</h1>
+
+      {photoArray.map((image) => (
+        <img className='photoImage' src={image} />
+      ))}
+
+      <img className='photoImage' src={coast} />
+
+
     </div>
   );
 }
