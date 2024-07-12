@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1>Revolving Carousel</h1> */}
+      <h1>Revolving Carousel</h1>
 
       <div style={theStyle} className='image-container'>
         {photoArray.map((image, index) => (
@@ -43,7 +43,7 @@ function App() {
         <button onClick={() => updateRotate(-45)}>Prev.</button>
       </div>
 
-      <img className='photoImage' src={ocean} />
+      {/* <img className='photoImage' src={ocean} /> */}
 
 
     </div>
