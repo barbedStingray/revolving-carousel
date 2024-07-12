@@ -9,10 +9,38 @@
   background-color: black;
   color: white;
   height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .photoImage {
   border: 2px solid white;
-  width: 250px;
+  width: 150px;
   height: auto;
+  image-rendering: crisp-edges; /* For non-chrome browsers */
+  image-rendering: -webkit-optimize-contrast; /* For Chrome */
+}
+
+.image-container {
+  /* border: 2px solid white; */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  /* transform: perspective(1000px) rotateY(0deg); */
+  transition: transform 0.7s;
+}
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+}
+.image-container span img {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
